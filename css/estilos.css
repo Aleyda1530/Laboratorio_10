@@ -175,3 +175,68 @@ body {
     flex-direction: column;
   }
 }
+
+/*PÁGINA DE SERVICIOS*/
+
+.pagina-servicios {
+  background-color: var(--blanco);
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.pagina-servicios h2 {
+  color: var(--cafe-oscuro);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion-servicios {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  color: #5c5046;
+  font-size: 1.05rem;
+}
+
+.lista-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.lista-servicios article {
+  background-color: var(--crema-claro);
+  border-top: 6px solid var(--rosa-pastel);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lista-servicios article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lista-servicios h3 {
+  color: var(--verde-ucre);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lista-servicios p {
+  color: #5c5046;
+  font-size: 0.95rem;
+}
+
+/*RESPONSIVE DE PÁGINA SERVICIOS*/
+@media (max-width: 768px) {
+  .pagina-servicios {
+    padding: 2rem 1rem;
+  }
+}
