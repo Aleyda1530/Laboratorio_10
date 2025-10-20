@@ -35,20 +35,21 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permite que baje si el ancho es pequeño */
+  gap: 1rem; /* separa los elementos */
 }
 
 .menu-principal li {
-  margin: 0.5rem;
+  display: inline;
 }
 
 .menu-principal a {
   text-decoration: none;
   color: var(--cafe-oscuro);
   font-weight: 500;
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 8px;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .menu-principal a:hover,
@@ -237,6 +238,79 @@ body {
 /*RESPONSIVE DE PÁGINA SERVICIOS*/
 @media (max-width: 768px) {
   .pagina-servicios {
+    padding: 2rem 1rem;
+  }
+}
+
+/*PORTAFOLIO*/
+
+.pagina-portafolio {
+  background-color: var(--blanco);
+  padding: 3rem 1rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.pagina-portafolio h2 {
+  color: var(--cafe-oscuro);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.descripcion-portafolio {
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+  color: #5c5046;
+  font-size: 1.05rem;
+}
+
+/* Galería de proyectos */
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.galeria-proyectos article {
+  background-color: var(--crema-claro);
+  border-top: 6px solid var(--verde-ucre);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-proyectos article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.galeria-proyectos img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.galeria-proyectos h3 {
+  color: var(--verde-ucre);
+  margin-bottom: 0.5rem;
+}
+
+.galeria-proyectos p {
+  color: #5c5046;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .pagina-portafolio {
     padding: 2rem 1rem;
   }
 }
